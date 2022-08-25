@@ -2,3 +2,5 @@
 .jekyll-cache
 .jekyll-metadata
 vendor
+members/.DS_Store
+.DS_Store
