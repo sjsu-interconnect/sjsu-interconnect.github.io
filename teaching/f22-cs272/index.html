@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>CS272 Reinforcement Learning and Sequential Decision Making | interconnect lab</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="CS272 Reinforcement Learning and Sequential Decision Making" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SJSU interconnect lab, led by Genya Ishigaki, researches next-generation telecommunication networks, with an emphasis on developing combinatorial optimization and machine learning techniques. Our ultimate goal is to propose adaptive and accountable algorithms for autonomous network resource coordination." />
+<meta property="og:description" content="SJSU interconnect lab, led by Genya Ishigaki, researches next-generation telecommunication networks, with an emphasis on developing combinatorial optimization and machine learning techniques. Our ultimate goal is to propose adaptive and accountable algorithms for autonomous network resource coordination." />
+<link rel="canonical" href="http://localhost:4000/teaching/f22-cs272/" />
+<meta property="og:url" content="http://localhost:4000/teaching/f22-cs272/" />
+<meta property="og:site_name" content="interconnect lab" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-25T09:16:42-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CS272 Reinforcement Learning and Sequential Decision Making" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"CS272 Reinforcement Learning and Sequential Decision Making","dateModified":"2022-08-25T09:16:42-07:00","datePublished":"2022-08-25T09:16:42-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/teaching/f22-cs272/"},"description":"SJSU interconnect lab, led by Genya Ishigaki, researches next-generation telecommunication networks, with an emphasis on developing combinatorial optimization and machine learning techniques. Our ultimate goal is to propose adaptive and accountable algorithms for autonomous network resource coordination.","url":"http://localhost:4000/teaching/f22-cs272/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="interconnect lab" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">interconnect lab</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/members/">Members</a><a class="page-link" href="/publication/">Publication</a><a class="page-link" href="/research/">Research</a><a class="page-link" href="/teaching/">Courses</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">CS272 Reinforcement Learning and Sequential Decision Making</h1>
+  </header>
+
+  <div class="post-content">
+    <!--
+# CS 272 Reinforcement Learning and Sequential Decision Making
+-->
+
+<h2 id="course-information">Course Information</h2>
+<ul>
+  <li>Instructor: Genya Ishigaki
+    <ul>
+      <li>Telephone: (408) 924-5076</li>
+      <li>Email: <a href="mailto:genya.ishigaki@sjsu.edu">genya.ishigaki@sjsu.edu</a></li>
+      <li>Office Hours:
+        <ul>
+          <li>Mondays &amp; Wednesdays 2:00 PM - 3:00 PM</li>
+          <li>Location: MacQuarrie Hall 215</li>
+          <li>You do NOT need to make an appointment for these office hours. You can simply stop by my office.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Class Days/Time: Mondays &amp; Wednesdays 12:00 PM - 1:15 PM</li>
+  <li>Class mode: In-person</li>
+  <li>Class Location: MacQuarrie Hall 422</li>
+  <li>Prerequisites: CS 157A with a grade of C- or better. Limited to MSCS, MSBI, and MSDS students.</li>
+</ul>
+
+<h2 id="course-description">Course Description</h2>
+<p>Introduction to reinforcement learning, deep reinforcement learning, other online learning algorithms, and their applications.</p>
+
+<h2 id="course-learning-outcomes-clo">Course Learning Outcomes (CLO)</h2>
+<p>Upon successful completion of this course, students will be able to:</p>
+
+<ul>
+  <li>Distinguish different types of reinforcement learning algorithms and when to use them.</li>
+  <li>Describe the benefits and potential challenges of deep reinforcement learning.</li>
+  <li>Apply reinforcement learning algorithms to real-world problems.</li>
+  <li>Analyze and evaluate the performance of reinforcement algorithms.</li>
+  <li>Create a machine learning project to solve a social or technical issue.</li>
+</ul>
+
+<h2 id="textbook">Textbook</h2>
+<ul>
+  <li>Richard S. Sutton and Andrew G. Barto, <a href="http://incompleteideas.net/book/RLbook2020.pdf">Reinforcement learning: An introduction</a> (Second edition), MIT press, 2018.</li>
+  <li>Open AI, <a href="https://spinningup.openai.com/en/latest/">Spinning Up in Deep RL</a>.</li>
+</ul>
+
+<h2 id="supplemental-textbooks">Supplemental Textbooks</h2>
+<ul>
+  <li>Michael A. Nielsen, <a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a>, Determination Press, 2015.</li>
+  <li>Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, <a href="https://mml-book.github.io/">Mathematics for Machine Learning</a>, Cambridge University Press, 2020.</li>
+</ul>
+
+<!--  
+- (Optional) Yoav Shoham and Kevin Leyton-Brown, _Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations_, Cambridge University Press, 2009.
+    - This book is [available online for free](http://www.masfoundations.org/download.html).
+ - For the Federated Learning and application parts, a set of papers will be listed in the course schedule. -->
+
+<!-- 
+## External Resources
+- Coding Deep RL: [Online lecture](https://youtu.be/ELE2_Mftqoc)
+-->
+
+<h2 id="other-equipment">Other Equipment</h2>
+<ul>
+  <li>Python development environment
+    <ul>
+      <li><a href="https://docs.anaconda.com/anaconda/install/index.html">Anaconda</a></li>
+      <li><a href="https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index">Google Colab</a></li>
+    </ul>
+  </li>
+  <li>LaTeX (*for Project Summary)
+    <ul>
+      <li><a href="https://www.overleaf.com/">Overleaf</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="grading">Grading</h2>
+<h3 id="exams-assignments-and-projects">Exams, Assignments, and Projects</h3>
+<ul>
+  <li>Four unit exams (Exam 1,2,3,4)
+    <ul>
+      <li>The worst-scored exam will be dropped automatically at the end of the semester.</li>
+      <li>All exams are planned to be conducted during the regular class hours.</li>
+    </ul>
+  </li>
+  <li>Four programming assignments (PA 0,1,2,3)
+    <ul>
+      <li>PA0: Coding practice project</li>
+      <li>PA1,2,3: RL projects</li>
+    </ul>
+  </li>
+  <li>Final project
+    <ul>
+      <li>It is recommended to form a group of TWO students. I may approve exceptions (individual or group of three) with a valid reason.</li>
+      <li>Topic Summary: A one-page document describing the project idea</li>
+      <li>Final Presentation: Presentation summarizing the evaluation of selected RL algorithms</li>
+      <li>Project Codes: Implementation of RL algorithms based on selected papers</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Item</th>
+      <th style="text-align: center">% in Final Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Exam 1,2,3,4</td>
+      <td style="text-align: center">36% (12% each; The worst one will be dropped.)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Programming Assignment (PA) 0</td>
+      <td style="text-align: center">7%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Programming Assignment (PA) 1,2,3</td>
+      <td style="text-align: center">36% (12% each)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Project Topic Summary</td>
+      <td style="text-align: center">5%</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Project Final Presentation / Codes</td>
+      <td style="text-align: center">16 %</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="grading-table">Grading Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Total Grade</th>
+      <th>Letter Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">97% and above</td>
+      <td>A plus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">92% to 96%</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">90% to 91%</td>
+      <td>A minus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">87% to 89%</td>
+      <td>B plus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">82% to 86%</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">80% to 81%</td>
+      <td>B minus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">77% to 79%</td>
+      <td>C plus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">72% to 76%</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">70% to 71%</td>
+      <td>C minus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">67% to 69%</td>
+      <td>D plus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">62% to 66%</td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">60% to 61%</td>
+      <td>D minus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">59% and below</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="extra-credits-and-reworks">Extra-credits and Reworks</h3>
+<p>The worst-scored exam among the four exam papers will be dropped automatically. No additional extra-credit assignments or rework opportunities will be given.</p>
+
+<h3 id="late-submission">Late Submission</h3>
+<p>Late submissions within 24 hours will be deducted 10% of its final grade. Submissions over 24 hours late will have 20% grade deducted. Late submissions over 2 days will not be accepted.</p>
+
+<h3 id="attendance">Attendance</h3>
+<p>I will not take attendance for classes. Students not attending either of the first two classes will be dropped to make room for students on the waiting list. Attempting to get marked as present (by having someone else attend in your place or using technological deceptions) will be considered academic dishonesty and at a minimum will result in you getting dropped from the course.</p>
+
+<h3 id="grading-policy">Grading Policy</h3>
+<p>The University Policy S16-9, Course Syllabi (<a href="http://www.sjsu.edu/senate/docs/S16-9.pdf">http://www.sjsu.edu/senate/docs/S16-9.pdf</a>) requires the following language to be included in the syllabus:</p>
+
+<p>“Success in this course is based on the expectation that students will spend, for each unit of credit, a minimum of 45 hours over the length of the course (normally three hours per unit per week) for instruction, preparation/studying, or course related activities, including but not limited to internships, labs, and clinical practica. Other course structures will have equivalent workload expectations as described in the syllabus.”</p>
+
+<h2 id="fall-2022-announcement-covid-19-and-monkeypox">Fall 2022 Announcement: COVID-19 and Monkeypox</h2>
+<p>Students registered for a College of Science (CoS) class with an in-person component should view <a href="https://drive.google.com/drive/folders/1Vmp39U9-CNpbwRobtZsGIZPTgRwV_Nh6">the CoS COVID-19 and Monkeypox Training slides</a> for updated CoS, SJSU, county, state and federal information and guidelines, and more information can be found on the SJSU Health Advisories website. By working together to follow these safety practices, we can keep our college safer. Failure to follow safety practice(s) outlined in the training, <a href="https://www.sjsu.edu/healthadvisories/">the SJSU Health Advisories website</a>, or instructions from instructors, TAs or CoS Safety Staff may result in dismissal from CoS buildings, facilities or field sites. Updates will be implemented as changes occur (and posted to the same links).</p>
+
+<h2 id="university-policies">University Policies</h2>
+<p>Per University Policy S16-9, university-wide policy information relevant to all courses, such as <strong>academic integrity, accommodations</strong>, etc. will be available on Office of Graduate and Undergraduate Programs’ Syllabus Information web page at <a href="http://www.sjsu.edu/gup/syllabusinfo/">http://www.sjsu.edu/gup/syllabusinfo/</a>. Make sure to review these policies and resources.</p>
+
+<h2 id="tentative-schedule-and-topics">Tentative Schedule and Topics</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Reference</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8/22</td>
+      <td>Overview</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8/24</td>
+      <td>What is Learning?</td>
+      <td>Shoham and Leyton-Brown Chap 7, <a href="https://arxiv.org/abs/0712.3329">Paper</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8/29</td>
+      <td>Python Recap</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8/31</td>
+      <td>Markov Decision Processes</td>
+      <td>Sutton and Barto Chap 3</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/5</td>
+      <td>Labor Day - No class</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/7</td>
+      <td>Policies and Value Functions</td>
+      <td>Sutton and Barto Chap 3</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/12</td>
+      <td>Dynamic Programming</td>
+      <td>Sutton and Barto Chap 4</td>
+      <td>PA0 Due</td>
+    </tr>
+    <tr>
+      <td>9/14</td>
+      <td>Coding: MDP and DP</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/19</td>
+      <td>Exam 1, Coding Q&amp;A</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/21</td>
+      <td>Model-free prediction</td>
+      <td>Sutton and Barto Chap 5, 6</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/26</td>
+      <td>Model-free prediction</td>
+      <td>Sutton and Barto Chap 5, 6</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9/28</td>
+      <td>Model-free control</td>
+      <td>Sutton and Barto Chap 5, 6</td>
+      <td>PA1 Due</td>
+    </tr>
+    <tr>
+      <td>10/3</td>
+      <td>Coding: Model-free control</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/5</td>
+      <td>Exam 2, Open AI Gym</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/10</td>
+      <td>Approximation</td>
+      <td>Sutton and Barto Chap 9, 10</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/12</td>
+      <td>Linear Approximation Implementation</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/17</td>
+      <td>Deep Learning</td>
+      <td><a href="http://neuralnetworksanddeeplearning.com/">Nielsen’s book</a></td>
+      <td>PA2 Due</td>
+    </tr>
+    <tr>
+      <td>10/19</td>
+      <td>Deep RL</td>
+      <td><a href="https://spinningup.openai.com/en/latest/">OpenAI RL Spinning Up</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/24</td>
+      <td>Coding: Deep Learning</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/26</td>
+      <td>Exam 3, Project Guidlines</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10/31</td>
+      <td>MAB and Regret</td>
+      <td>Sutton and Barto Chap 2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/2</td>
+      <td>Integrating Learning and Planning</td>
+      <td>Sutton and Barto Chap 8</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/7</td>
+      <td>Project Topic Discussion</td>
+      <td> </td>
+      <td>Project Topic Due</td>
+    </tr>
+    <tr>
+      <td>11/9</td>
+      <td>Policy Gradient Methods</td>
+      <td>Sutton and Barto Chap 13</td>
+      <td>PA3 Due</td>
+    </tr>
+    <tr>
+      <td>11/14</td>
+      <td>Actor-Critic Methods</td>
+      <td>Sutton and Barto Chap 13</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/16</td>
+      <td>Policy Gradient Implementation</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/21</td>
+      <td>Exam 4, Evaluation Guidlines</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/23</td>
+      <td>Non-Instructional Day - No class</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/28</td>
+      <td>Advanced Topics in RL</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11/30</td>
+      <td>Final presentation</td>
+      <td> </td>
+      <td>Final Slides / Project Codes Due</td>
+    </tr>
+    <tr>
+      <td>12/5</td>
+      <td>Final presentation</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+
+## Useful Links
+- If you do not have right equipment (laptop, etc.)
+    - "SJSU students, faculty, and staff can borrow laptops, iPads, and more from SCS at no charge. Laptops will be available for week-long and semester-long loan."
+    - [https://library.sjsu.edu/student-computing-services/student-computing-services](https://library.sjsu.edu/student-computing-services/student-computing-services)
+- If you want to talk to someone
+    - "Whether you are struggling with stress, depression, anxiety or relationship problems, Counseling and Psychological Services is here to provide the support you need to succeed at SJSU. In our current state of remote online instruction, CAPS is providing all of its services through confidential telehealth sessions."
+    - [https://www.sjsu.edu/counseling/](https://www.sjsu.edu/counseling/)    
+- If you need additional accommodation for your learning
+    - "The Accessible Education Center (AEC) proudly presents its vision of redefining ability at San Jose State University by providing comprehensive services in support of the educational development and success of student with disabilities."
+    - [https://www.sjsu.edu/aec/](https://www.sjsu.edu/aec/)
+- If you find a financial challenge
+    - "SJSU Cares is here to provide assistance when you need it most. We provide resources and services for SJSU students facing an unforseen financial crisis. If you’re having trouble paying for food, housing or other bills, face homelessness, food insecurity, etc."
+    - [https://www.sjsu.edu/sjsucares/](https://www.sjsu.edu/sjsucares/)
+-->
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">interconnect lab</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">interconnect lab</li><li><a class="u-email" href="mailto:genya.ishigaki@sjsu.edu">genya.ishigaki@sjsu.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>SJSU interconnect lab, led by Genya Ishigaki, researches next-generation telecommunication networks, with an emphasis on developing combinatorial optimization and machine learning techniques. Our ultimate goal is to propose adaptive and accountable algorithms for autonomous network resource coordination.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
